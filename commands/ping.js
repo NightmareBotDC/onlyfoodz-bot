@@ -4,7 +4,7 @@ module.exports = {
 	data: new SlashCommandBuilder()
 		.setName("ping")
 		.setDescription("Check the bot's ping"),
-	async execute(client, interaction, database, voice) {
+	async execute(client, interaction) {
 		const reply = await interaction.reply({
 			content: "",
 			embeds: [
@@ -38,5 +38,5 @@ module.exports = {
 			],
 		});
 	},
-	async autocomplete(client, interaction, database) {},
+	async autocomplete(client, interaction) {},
 };
